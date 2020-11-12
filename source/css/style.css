@@ -1,0 +1,23 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+    max-width: 80ch;
+    margin: auto;
+}
+
+td {
+    padding: 0;
+    vertical-align: top;
+    padding-bottom: 1em;
+}
+
+tr:last-child>td {
+    padding-bottom: 0;
+}
+
+.nw {
+    white-space: nowrap;
+}
+
+table {
+    border-spacing: 0;
+}

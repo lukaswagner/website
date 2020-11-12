@@ -6,17 +6,12 @@ module.exports = function (env) {
     const plugins = [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './source/pages/index.pug',
-            inject: false
-        }),
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: 'source/css', to: '.' },
-            ]
+            template: './source/pages/index.pug'
         })
     ];
 
     return {
+        entry: './source/pages/index.pug',
         module: {
             rules: [
                 {
