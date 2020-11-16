@@ -1,7 +1,17 @@
 body {
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Fira Mono", "Courier New", Courier, monospace;
     max-width: 80ch;
     margin: auto;
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+}
+
+a:visited {
+    color: #C586C0;
+}
+
+a {
+    color: #569CD6;
 }
 
 td {

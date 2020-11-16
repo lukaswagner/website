@@ -1,12 +1,19 @@
 'use strict';
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function (env) {
     const plugins = [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './source/pages/index.pug'
+            template: './source/pages/index.pug',
+            inject: false
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'source/css', to: '.' }
+            ]
         })
     ];
 
