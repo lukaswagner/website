@@ -3,7 +3,7 @@ include row.pug
 p ## Contact & other places ##
 table
     +row('e-mail')
-        a(href='mailto://lukas.wagner@hpi.de') lukas.wagner@hpi.de
+        a(id='m-a', onmouseover="mail('lukas.wagner', 'hpi.de', 'm-a')" ) [hover to show]
     +row('GitHub')
         a(href='https://github.com/lukaswagner') lukaswagner
     +row('ResearchGate')

@@ -12,6 +12,7 @@ a:visited {
 
 a {
     color: #569CD6;
+    text-decoration: underline;
 }
 
 td {
