@@ -15,6 +15,10 @@ a {
     text-decoration: underline;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 p {
     color: #6A9955
 }
