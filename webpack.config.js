@@ -13,7 +13,7 @@ module.exports = function (env) {
         plugins: [
             new HtmlWebpackPlugin({
                 filename: 'index.html',
-                template: './source/pages/index.pug'
+                template: './source/index.pug'
             })
         ],
         module: {
