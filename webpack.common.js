@@ -1,15 +1,10 @@
 'use strict';
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
 module.exports = function (env) {
-    const plugins = [
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: 'source/css', to: '.' }
-            ]
-        })
-    ];
+    const flOptions = {
+        esModule: false,
+        name: '[name].css'
+    }
 
     return {
         entry: './source/pages/index.pug',
@@ -24,14 +19,12 @@ module.exports = function (env) {
                 {
                     test: /\.css$/,
                     use: [
-                        {
-                            loader: 'style-loader'
-                        }, {
-                            loader: 'css-loader'
-                        }],
+                        { loader: 'file-loader', options: flOptions },
+                        { loader: 'extract-loader' },
+                        { loader: 'css-loader', },
+                    ],
                 },
             ],
         },
-        plugins
     };
 }

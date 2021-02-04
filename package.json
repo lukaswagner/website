@@ -10,10 +10,12 @@
   "license": "MIT",
   "devDependencies": {
     "copy-webpack-plugin": "^6.3.1",
+    "css-loader": "^5.0.1",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "pug": "^3.0.0",
     "pug-loader": "^2.4.0",
-    "style-loader": "^2.0.0",
     "terser": "^5.5.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
