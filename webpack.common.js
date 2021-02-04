@@ -3,7 +3,7 @@
 module.exports = function (env) {
     const flOptions = {
         esModule: false,
-        name: '[name].css'
+        name: '[name].[ext]'
     }
 
     return {
@@ -12,17 +12,19 @@ module.exports = function (env) {
             rules: [
                 {
                     test: /\.pug$/,
-                    use: {
-                        loader: 'pug-loader'
-                    },
+                    use: { loader: 'pug-loader' },
                 },
                 {
                     test: /\.css$/,
                     use: [
                         { loader: 'file-loader', options: flOptions },
                         { loader: 'extract-loader' },
-                        { loader: 'css-loader', },
+                        { loader: 'css-loader' },
                     ],
+                },
+                {
+                    test: /\.ttf$/,
+                    use: { loader: 'file-loader', options: flOptions },
                 },
             ],
         },

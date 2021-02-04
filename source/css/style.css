@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'Fira Mono';
+    src: url(../fonts/fira-mono.ttf) format('truetype');
+}
+
 body {
-    font-family: "Fira Mono", "Courier New", Courier, monospace;
+    font-family: 'Fira Mono', 'Courier New', Courier, monospace;
     max-width: 80ch;
     margin: auto;
     background-color: #1E1E1E;
