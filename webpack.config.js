@@ -1,5 +1,7 @@
 'use strict';
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = function (env) {
     const flOptions = {
         esModule: false,
@@ -7,7 +9,13 @@ module.exports = function (env) {
     }
 
     return {
-        entry: './source/pages/index.pug',
+        entry: {},
+        plugins: [
+            new HtmlWebpackPlugin({
+                filename: 'index.html',
+                template: './source/pages/index.pug'
+            })
+        ],
         module: {
             rules: [
                 {
@@ -27,6 +35,6 @@ module.exports = function (env) {
                     use: { loader: 'file-loader', options: flOptions },
                 },
             ],
-        },
+        }
     };
 }

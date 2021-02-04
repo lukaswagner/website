@@ -9,21 +9,18 @@
   "author": "Lukas Wagner",
   "license": "MIT",
   "devDependencies": {
-    "copy-webpack-plugin": "^6.3.1",
     "css-loader": "^5.0.1",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^4.5.0",
+    "html-webpack-plugin": "^5.0.0",
     "pug": "^3.0.0",
     "pug-loader": "^2.4.0",
-    "terser": "^5.5.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.4.0"
+    "webpack": "^5.20.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "start": "webpack serve --mode development",
+    "build": "webpack build --mode production"
   }
 }
