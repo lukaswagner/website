@@ -1,6 +1,7 @@
-include row.pug
+include partials/row.pug
+include partials/heading.pug
 
-p ## Contact & other places ##
++heading('Contact & other places')
 table
     +row('e-mail')
         a(id='m-a', onmouseover="mail.show('lukas.wagner', 'hpi.de', 'm-a')" ) [hover to show]
