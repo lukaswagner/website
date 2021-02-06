@@ -37,6 +37,10 @@ p {
     color: var(--vs-comment);
 }
 
+div {
+    margin-bottom: 1em;
+}
+
 td {
     padding: 0;
     vertical-align: top;
