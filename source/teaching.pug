@@ -1,0 +1,34 @@
+include partials/row.pug
+include partials/heading.pug
+
+-
+    const cg1 = 'Computer Graphics I';
+    const cg2 = 'Computer Graphics II';
+    const dis = 'Designing Interactive Systems';
+    const bid = 'Building Interactive Devices';
+    const gp = 'Game Programming';
+    const bsc = 'BSc';
+    const lec = 'lecture';
+    const sem = 'seminar';
+    const ta = 'Teaching assistant';
+    const tutor = 'Tutor';
+
+mixin teaching(name, degree, type, job, last=true)
+    span.nbr #{name} 
+    span.nbr (#{degree} #{type}, #{job})#{last?'':','}
+
++heading('Teaching')
+table
+    +row('Winter 20/21')
+        +teaching(cg1, bsc, lec, ta)
+    +row('Summer 20')
+        +teaching(cg2, bsc, lec, ta)
+    +row('Winter 19/20')
+        +teaching(cg1, bsc, lec, ta, false)
+        +teaching(gp, bsc, sem, tutor)
+    +row('Summer 19')
+        +teaching(dis, bsc, lec, ta)
+    +row('Winter 18/19')
+        +teaching(bid, bsc, lec, ta)
+    +row('Summer 17')
+        +teaching(bid, bsc, lec, ta)
