@@ -9,7 +9,9 @@ module.exports = function (env) {
     }
 
     return {
-        entry: {},
+        entry: {
+            mail: './source/js/mail.js',
+        },
         plugins: [
             new HtmlWebpackPlugin({
                 filename: 'index.html',
@@ -28,7 +30,7 @@ module.exports = function (env) {
                         { loader: 'file-loader', options: flOptions },
                         { loader: 'extract-loader' },
                         { loader: 'css-loader' },
-                    ],
+                    ]
                 },
                 {
                     test: /\.ttf$/,
