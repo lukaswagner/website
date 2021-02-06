@@ -4,13 +4,12 @@ include partials/heading.pug
 +heading('CV')
 table
     +row('2019 - ?')
-        | PhD student at Hasso Plattner Institute,
-        br
-        | Computer Graphics Systems chair // 
-        a(href='https://hpi3d.de') hpi3d.de
+        span.nbr PhD student at Hasso Plattner Institute,
+        span.nbr Computer Graphics Systems chair
+        include partials/divider.pug
+        a.nbr(href='https://hpi3d.de') hpi3d.de
     +row('2016 - 2019')
-        | MSc student at Hasso Plattner Institute,
-        br
-        | focus on computer graphics and human-computer interaction
+        span.nbr MSc student at Hasso Plattner Institute,
+        span.nbr focus on computer graphics and human-computer interaction
     +row('2016 - 2019')
-        | BSc student at Hasso Plattner Institute
+        span.nbr BSc student at Hasso Plattner Institute

@@ -55,3 +55,14 @@ tr:last-child>td {
 table {
     border-spacing: 0;
 }
+
+.nbr {
+    display: inline-block;
+    white-space: pre;
+}
+
+.div::before,
+.div::after {
+    content: ' ';
+    white-space: pre;
+}
