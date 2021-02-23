@@ -1,6 +1,7 @@
 'use strict';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = function (env) {
     const flOptions = {
@@ -36,6 +37,13 @@ module.exports = function (env) {
                     test: /\.ttf$/,
                     use: { loader: 'file-loader', options: flOptions },
                 },
+            ],
+        },
+        optimization: {
+            minimize: true,
+            minimizer: [
+                `...`,
+                new CssMinimizerPlugin(),
             ],
         }
     };
