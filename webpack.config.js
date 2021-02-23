@@ -1,6 +1,7 @@
 'use strict';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = function (env) {
@@ -17,6 +18,9 @@ module.exports = function (env) {
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 template: './source/index.pug'
+            }),
+            new CompressionPlugin({
+                minRatio: 1
             })
         ],
         module: {
