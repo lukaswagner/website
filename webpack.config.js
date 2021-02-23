@@ -40,7 +40,7 @@ module.exports = function (env) {
                 glyphs: chars()
             }),
             new CompressionPlugin({
-                minRatio: 1
+                minRatio: 0.9
             })
         ],
         module: {
@@ -58,7 +58,7 @@ module.exports = function (env) {
                     ]
                 },
                 {
-                    test: /\.ttf$/,
+                    test: /\.(eot|otf|ttf|woff|woff2)$/,
                     use: { loader: 'file-loader', options: flOptions },
                 },
             ],
