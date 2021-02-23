@@ -3,6 +3,23 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const FontminPlugin = require('fontmin-webpack');
+
+function code(char) {
+    return char.charCodeAt();
+}
+
+function charRange(s, e) {
+    return String.fromCharCode(...[...Array(e - s + 1)].map((_, i) => i + s));
+}
+
+function chars() {
+    const num = charRange(code('0'), code('9'));
+    const lower = charRange(code('a'), code('z'));
+    const upper = charRange(code('A'), code('Z'));
+    const other = ' #&\'()+,-./:?@[]';
+    return [num, lower, upper, other];
+}
 
 module.exports = function (env) {
     const flOptions = {
@@ -18,6 +35,9 @@ module.exports = function (env) {
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 template: './source/index.pug'
+            }),
+            new FontminPlugin({
+                glyphs: chars()
             }),
             new CompressionPlugin({
                 minRatio: 1
