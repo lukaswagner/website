@@ -14,8 +14,8 @@ include partials/heading.pug
     const tutor = 'Tutor';
 
 mixin teaching(name, degree, type, job, last=true)
-    span.nbr #{name} 
-    span.nbr (#{degree} #{type}, #{job})#{last?'':','}
+    | #{name} 
+    | (#{degree} #{type}, #{job})#{last?'':','}
 
 +heading('Teaching')
 table
@@ -25,6 +25,7 @@ table
         +teaching(cg2, bsc, lec, ta)
     +row('Winter 19/20')
         +teaching(cg1, bsc, lec, ta, false)
+        br
         +teaching(gp, bsc, sem, tutor)
     +row('Summer 19')
         +teaching(dis, bsc, lec, ta)

@@ -52,17 +52,13 @@ tr:last-child>td {
 }
 
 .nw {
-    width: 12ch;
+    max-width: 12ch;
+    min-width: 12ch;
     white-space: nowrap;
 }
 
 table {
     border-spacing: 0;
-}
-
-.nbr {
-    display: inline-block;
-    white-space: pre;
 }
 
 .div::before,
