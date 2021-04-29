@@ -2,34 +2,47 @@ include partials/row.pug
 include partials/heading.pug
 
 -
+    // chairs
     const cg1 = 'Computer Graphics I';
     const cg2 = 'Computer Graphics II';
+    // courses
     const dis = 'Designing Interactive Systems';
     const bid = 'Building Interactive Devices';
     const gp = 'Game Programming';
+    const sma = 'Software Mining and Applications';
+    // degrees
     const bsc = 'BSc';
-    const lec = 'lecture';
-    const sem = 'seminar';
-    const ta = 'Teaching assistant';
-    const tutor = 'Tutor';
+    const msc = 'MSc';
+    // course types
+    const lecture = 'lecture';
+    const seminar = 'seminar';
+    // roles
+    const ta = 'teaching assistant';
+    const tutor = 'tutor';
+    const lecturer = 'lecturer';
 
 mixin teaching(name, degree, type, job, last=true)
     | #{name} 
-    | (#{degree} #{type}, #{job})#{last?'':','}
+    | (#{degree} #{type}, #{job})
+    if(!last)
+        | ,
+        br
 
 +heading('Teaching')
 table
+    +row('Summer 21')
+        +teaching(cg2, bsc, lecture, lecturer, false)
+        +teaching(sma, msc, seminar, tutor)
     +row('Winter 20/21')
-        +teaching(cg1, bsc, lec, ta)
+        +teaching(cg1, bsc, lecture, ta)
     +row('Summer 20')
-        +teaching(cg2, bsc, lec, ta)
+        +teaching(cg2, bsc, lecture, ta)
     +row('Winter 19/20')
-        +teaching(cg1, bsc, lec, ta, false)
-        br
-        +teaching(gp, bsc, sem, tutor)
+        +teaching(cg1, bsc, lecture, ta, false)
+        +teaching(gp, bsc, seminar, tutor)
     +row('Summer 19')
-        +teaching(dis, bsc, lec, ta)
+        +teaching(dis, bsc, lecture, ta)
     +row('Winter 18/19')
-        +teaching(bid, bsc, lec, ta)
+        +teaching(bid, bsc, lecture, ta)
     +row('Summer 17')
-        +teaching(bid, bsc, lec, ta)
+        +teaching(bid, bsc, lecture, ta)
