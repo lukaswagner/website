@@ -23,7 +23,7 @@ jobs:
           ref: deploy
           path: deploy
       - name: Clean up output
-        run: git rm -rf *
+        run: git rm -rf --ignore-unmatch *
         working-directory: deploy
       - name: Set up dependencies
         run: npm install
