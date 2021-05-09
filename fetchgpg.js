@@ -21,7 +21,7 @@ https.get(
             const data = JSON.parse(str);
             if (!Array.isArray(data) || data.length !== 1) error('Invalid response', data);
             const key = data[0].raw_key;
-            fs.writeFileSync('./key.asc', key);
+            fs.writeFileSync('../deploy/key.asc', key);
             process.exit(0);
         });
     })

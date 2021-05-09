@@ -33,7 +33,7 @@ jobs:
         working-directory: src
       - name: Fetch gpg key
         run: npm run gpg
-        working-directory: deploy
+        working-directory: src
     #   - name: Create CNAME
     #     run: echo "lwgnr.dev" > CNAME
     #     working-directory: deploy
