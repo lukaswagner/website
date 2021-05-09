@@ -31,9 +31,6 @@ jobs:
       - name: Build website
         run: npm run build -- --output-path=../deploy
         working-directory: src
-      - name: Fetch gpg key
-        run: npm run gpg
-        working-directory: src
     #   - name: Create CNAME
     #     run: echo "lwgnr.dev" > CNAME
     #     working-directory: deploy

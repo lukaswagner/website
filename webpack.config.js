@@ -58,7 +58,7 @@ module.exports = function (env) {
                     ]
                 },
                 {
-                    test: /\.(eot|otf|ttf|woff|woff2)$/,
+                    test: /\.(eot|otf|ttf|woff|woff2|asc)$/,
                     use: { loader: 'file-loader', options: flOptions },
                 },
             ],
