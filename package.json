@@ -12,7 +12,7 @@
         "compression-webpack-plugin": "^9.2.0",
         "css-loader": "^6.5.1",
         "css-minimizer-webpack-plugin": "^3.4.1",
-        "fira": "github:mozilla/Fira",
+        "fira": "mozilla/Fira",
         "fontmin": "^0.9.9",
         "fontmin-webpack": "^3.2.0",
         "html-webpack-plugin": "^5.5.0",
