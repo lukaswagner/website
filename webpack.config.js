@@ -1,9 +1,12 @@
 'use strict';
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 const CompressionPlugin = require("compression-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const FontminPlugin = require('fontmin-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 function code(char) {
     return char.charCodeAt();
@@ -21,15 +24,15 @@ function chars() {
     return [num, lower, upper, other];
 }
 
-module.exports = function (env) {
-    const flOptions = {
-        esModule: false,
-        name: '[name].[ext]'
-    }
-
+module.exports = function (env, argv) {
     return {
+        output: {
+            path: path.resolve(__dirname, 'dist'),
+            clean: true
+        },
         entry: {
             mail: './source/js/mail.js',
+            style: './source/css/style.css',
         },
         plugins: [
             new HtmlWebpackPlugin({
@@ -39,6 +42,8 @@ module.exports = function (env) {
             new FontminPlugin({
                 glyphs: chars()
             }),
+            new MiniCssExtractPlugin(),
+            new RemoveEmptyScriptsPlugin(),
             new CompressionPlugin({
                 minRatio: 0.9
             })
@@ -52,14 +57,23 @@ module.exports = function (env) {
                 {
                     test: /\.css$/,
                     use: [
-                        { loader: 'file-loader', options: flOptions },
-                        { loader: 'extract-loader' },
+                        MiniCssExtractPlugin.loader,
                         { loader: 'css-loader' },
                     ]
                 },
                 {
-                    test: /\.(eot|otf|ttf|woff|woff2|asc)$/,
-                    use: { loader: 'file-loader', options: flOptions },
+                    test: /\.(eot|otf|ttf|woff|woff2)$/,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'fonts/[name][ext][query]'
+                    }
+                },
+                {
+                    test: /\.asc$/,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: '[name][ext][query]'
+                    }
                 },
             ],
         },
