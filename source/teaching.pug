@@ -8,7 +8,7 @@ include partials/heading.pug
     // courses
     const dis = 'Designing Interactive Systems';
     const bid = 'Building Interactive Devices';
-    const gp = 'Game Programming';
+    const gp = 'Game Programming / Dark AI';
     const sma = 'Software Mining and Applications';
     // degrees
     const bsc = 'BSc';
@@ -31,7 +31,8 @@ mixin teaching(name, degree, type, job, last=true)
 +heading('Teaching')
 table
     +row('Winter 21/22')
-        +teaching(cg1, bsc, lecture, ta)
+        +teaching(cg1, bsc, lecture, lecturer, false)
+        +teaching(gp, bsc, seminar, tutor)
     +row('Summer 21')
         +teaching(cg2, bsc, lecture, lecturer, false)
         +teaching(sma, msc, seminar, tutor)
