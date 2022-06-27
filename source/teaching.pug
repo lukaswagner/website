@@ -30,6 +30,8 @@ mixin teaching(name, degree, type, job, last=true)
 
 +heading('Teaching')
 table
+    +row('Summer 22')
+        +teaching(cg2, bsc, lecture, ta)
     +row('Winter 21/22')
         +teaching(cg1, bsc, lecture, lecturer, false)
         +teaching(gp, bsc, seminar, tutor)
