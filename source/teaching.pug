@@ -21,8 +21,11 @@ include partials/heading.pug
     const tutor = 'tutor';
     const lecturer = 'lecturer';
 
-mixin teaching(name, degree, type, job, last=true)
-    | #{name} 
+mixin teaching(name, href, degree, type, job, last=true)
+    if(href)
+        a(href='https://hpi.de/studium/im-studium/lehrveranstaltungen/it-systems-engineering-ma/lehrveranstaltung/' + href + '.html') #{name} 
+    else
+        | #{name} 
     | (#{degree} #{type}, #{job})
     if(!last)
         | ,
@@ -31,23 +34,23 @@ mixin teaching(name, degree, type, job, last=true)
 +heading('Teaching')
 table
     +row('Summer 22')
-        +teaching(cg2, bsc, lecture, ta)
+        +teaching(cg2, 'sose-22-3479-3d_computergrafik-ii', bsc, lecture, ta)
     +row('Winter 21/22')
-        +teaching(cg1, bsc, lecture, lecturer, false)
-        +teaching(gp, bsc, seminar, tutor)
+        +teaching(cg1, 'wise-21-22-3304-3d_computergrafik-i', bsc, lecture, lecturer, false)
+        +teaching(gp, 'wise-21-22-3367-alt-dark-mirror-ai-and-society-neuplanung-und-konstruktion-von-ai_basierten-interaktiven-systemen-mit-einer-dunklen-seite-der-ki', bsc, seminar, tutor)
     +row('Summer 21')
-        +teaching(cg2, bsc, lecture, lecturer, false)
-        +teaching(sma, msc, seminar, tutor)
+        +teaching(cg2, 'sose-21-3196-3d_computergrafik-ii', bsc, lecture, lecturer, false)
+        +teaching(sma, 'sose-21-3200-software-mining-and-applications', msc, seminar, tutor)
     +row('Winter 20/21')
-        +teaching(cg1, bsc, lecture, ta)
+        +teaching(cg1, 'wise-20-21-3142-3d_computergrafik-i', bsc, lecture, ta)
     +row('Summer 20')
-        +teaching(cg2, bsc, lecture, ta)
+        +teaching(cg2, 'sose-20-3024-3d_computergrafik-ii', bsc, lecture, ta)
     +row('Winter 19/20')
-        +teaching(cg1, bsc, lecture, ta, false)
-        +teaching(gp, bsc, seminar, tutor)
+        +teaching(cg1, 'wise-19-20-2888-3d_computergrafik-i', bsc, lecture, ta, false)
+        +teaching(gp, 'wise-19-20-2889-game-programming', bsc, seminar, tutor)
     +row('Summer 19')
-        +teaching(dis, bsc, lecture, ta)
+        +teaching(dis, 'sose-19-2726-designing-interactive-systems', bsc, lecture, ta)
     +row('Winter 18/19')
-        +teaching(bid, bsc, lecture, ta)
+        +teaching(bid, 'wise-18-19-2637-building-interactive-devices', bsc, lecture, ta)
     +row('Summer 17')
-        +teaching(bid, bsc, lecture, ta)
+        +teaching(bid, 'sose-17-2271-building-interactive-devices', bsc, lecture, ta)
