@@ -41,7 +41,7 @@ p {
 }
 
 div {
-    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 td {
@@ -68,4 +68,25 @@ table {
 .div::after {
     content: ' ';
     white-space: pre;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 1em 0;
+    margin: 0;
+    background-color: var(--vs-background);
+}
+
+#header-spacing {
+    height: 2em;
+    margin-top: 0;
+}
+
+a.anchor {
+    position: relative;
+    top: -2em;
+    visibility: hidden;
 }

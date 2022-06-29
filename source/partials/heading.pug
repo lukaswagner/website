@@ -1,2 +1,3 @@
 mixin heading(text, url)
-    p(id=url) # #{text}
+    a(class='anchor', id=url)
+    p # #{text}
