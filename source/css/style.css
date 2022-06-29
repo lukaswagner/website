@@ -30,3 +30,7 @@ p {
 div {
     margin-top: var(--space);
 }
+
+div:last-child {
+    margin-bottom: var(--space);
+}
