@@ -1,0 +1,26 @@
+include partials/row.pug
+include partials/heading.pug
+
++heading('Selected projects', 'projects')
+table
+    +row('vidi')
+        | visual dataset inspector: 
+        | Web-based 3D scatter plot viewer for huge data sets (1M - 100M). 
+        | Uses WebGL to facilitate interactive exploration of complex, 
+        | multi-dimensional data sets. 
+        | See 
+        a(href='#publications') publications
+        |  for accompanying research.
+        include partials/divider.pug
+        a(href='https://vidi.lwgnr.dev/') demo
+        include partials/divider.pug
+        a(href='https://github.com/lukaswagner/vidi') gh
+    +row('uebungsrahmen')
+        | Web-based coding exercise framework. 
+        | Designed to be reusable between lectures. 
+        | Employed repeatedly for computer graphics lectures for accompanying 
+        | exercises using WebGL (see 
+        a(href='#teaching') teaching
+        | ), with consistent positive feedback by students.
+        include partials/divider.pug
+        a(href='https://github.com/lukaswagner/uebungsrahmen') gh
