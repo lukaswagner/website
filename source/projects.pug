@@ -4,7 +4,7 @@ include partials/heading.pug
 +heading('Selected projects', 'projects')
 table
     +row('vidi')
-        | visual dataset inspector: 
+        | [TS] visual dataset inspector: 
         | Web-based 3D scatter plot viewer for huge data sets (1M - 100M). 
         | Uses WebGL to facilitate interactive exploration of complex, 
         | multi-dimensional data sets. 
@@ -16,7 +16,7 @@ table
         include partials/divider.pug
         a(href='https://github.com/lukaswagner/vidi') gh
     +row('uebungsrahmen')
-        | Web-based coding exercise framework (backend uses Node.js). 
+        | [JS/TS] Web-based coding exercise framework (backend uses Node.js). 
         | Designed to be customizable and reusable between lectures. 
         | Employed repeatedly alongside computer graphics lectures for 
         | accompanying exercises using WebGL (see 
@@ -28,3 +28,9 @@ table
         | Controlled using CLI or electron-based GUI.
         include partials/divider.pug
         a(href='https://github.com/lukaswagner/uebungsrahmen') gh
+    +row('csv-parser')
+        | [TS] Quick, multi-threaded CSV parser with focus on handling huge files. Utilizes web workers to leverage all CPU cores. Significantly faster than other in-browser CSV parsers, with support for much larger files.
+        include partials/divider.pug
+        a(href='https://github.com/lukaswagner/csv-parser') gh
+        include partials/divider.pug
+        a(href='https://www.npmjs.com/package/@lukaswagner/csv-parser') npm
