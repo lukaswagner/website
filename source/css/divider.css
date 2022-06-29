@@ -1,0 +1,5 @@
+.divider::before,
+.divider::after {
+    content: ' ';
+    white-space: pre;
+}

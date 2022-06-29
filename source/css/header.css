@@ -1,0 +1,25 @@
+/* fixed position header */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: var(--space) 0;
+    margin: 0;
+    background-color: var(--vs-background);
+}
+
+/* space behind header to avoid occluding content */
+#header-spacing {
+    /* two spaces - third space is added by first element's margin */
+    height: calc(var(--space) * 2);
+    margin-top: 0;
+}
+
+/* fix for jump target being hidden behind header */
+a.anchor {
+    position: relative;
+    /* two spaces - third space is added by first element's margin */
+    top: calc(var(--space) * -2);
+    visibility: hidden;
+}

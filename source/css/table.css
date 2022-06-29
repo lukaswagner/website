@@ -1,0 +1,19 @@
+table {
+    border-spacing: 0;
+}
+
+td {
+    padding: 0;
+    vertical-align: top;
+    padding-bottom: var(--space);
+}
+
+tr:last-child>td {
+    padding-bottom: 0;
+}
+
+.nw {
+    max-width: var(--left-col);
+    min-width: var(--left-col);
+    white-space: nowrap;
+}

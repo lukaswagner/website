@@ -1,0 +1,12 @@
+a:visited {
+    color: var(--vs-visited-link);
+}
+
+a {
+    color: var(--vs-link);
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}

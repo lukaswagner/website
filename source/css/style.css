@@ -1,3 +1,9 @@
+@import './divider.css';
+@import './font.css';
+@import './header.css';
+@import './link.css';
+@import './table.css';
+
 :root {
     /* colors copied from vs code dark theme */
     --vs-background: #1E1E1E;
@@ -5,14 +11,8 @@
     --vs-comment: #6A9955;
     --vs-link: #569CD6;
     --vs-visited-link: #C586C0;
-}
-
-@font-face {
-    font-family: 'Fira Mono';
-    src: url(~fira/eot/FiraMono-Regular.eot) format('eot');
-    src: url(~fira/ttf/FiraMono-Regular.ttf) format('ttf');
-    src: url(~fira/woff/FiraMono-Regular.woff) format('woff');
-    src: url(~fira/woff2/FiraMono-Regular.woff2) format('woff2');
+    --left-col: 13ch;
+    --space: 1em;
 }
 
 body {
@@ -23,70 +23,10 @@ body {
     color: var(--vs-text);
 }
 
-a:visited {
-    color: var(--vs-visited-link);
-}
-
-a {
-    color: var(--vs-link);
-    text-decoration: none;
-}
-
-a:hover {
-    cursor: pointer;
-}
-
 p {
     color: var(--vs-comment);
 }
 
 div {
-    margin-top: 1em;
-}
-
-td {
-    padding: 0;
-    vertical-align: top;
-    padding-bottom: 1em;
-}
-
-tr:last-child>td {
-    padding-bottom: 0;
-}
-
-.nw {
-    max-width: 13ch;
-    min-width: 13ch;
-    white-space: nowrap;
-}
-
-table {
-    border-spacing: 0;
-}
-
-.div::before,
-.div::after {
-    content: ' ';
-    white-space: pre;
-}
-
-#header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    padding: 1em 0;
-    margin: 0;
-    background-color: var(--vs-background);
-}
-
-#header-spacing {
-    height: 2em;
-    margin-top: 0;
-}
-
-a.anchor {
-    position: relative;
-    top: -2em;
-    visibility: hidden;
+    margin-top: var(--space);
 }
