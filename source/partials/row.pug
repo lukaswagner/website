@@ -1,6 +1,9 @@
-mixin row(label)
+mixin row(label, url)
     tr
-        td.nw= label
+        td.nw
+            if(url)
+                a(id=url).anchor.r-anchor
+            span= label
         td
             include divider.pug
         td

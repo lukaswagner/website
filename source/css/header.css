@@ -16,10 +16,16 @@
     margin-top: 0;
 }
 
-/* fix for jump target being hidden behind header */
+/* fixes for jump target being hidden behind header */
 a.anchor {
     position: relative;
-    /* two spaces - third space is added by first element's margin */
-    top: calc(var(--space) * -2);
     visibility: hidden;
+}
+
+a.h-anchor {
+    top: calc(var(--space) * -2);
+}
+
+a.r-anchor {
+    top: calc(var(--space) * -3);
 }
