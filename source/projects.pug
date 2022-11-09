@@ -3,19 +3,20 @@ include partials/heading.pug
 
 +heading('Selected projects', 'projects')
 table
-    +row('vidi')
+    +row('vidi', 'vidi')
         | [TS] visual dataset inspector: 
         | Web-based 3D scatter plot viewer for huge data sets (1M - 100M). 
         | Uses WebGL to facilitate interactive exploration of complex, 
-        | multi-dimensional data sets. 
-        | See accompanying research: 
-        a(href='#web3d2022') [1] 
-        a(href='#web3d2020') [2]
+        | multi-dimensional data sets (see 
+        a(href='#web3d2022') Web3D 2022
+        | , 
+        a(href='#web3d2020') Web3D 2020
+        | ).
         include partials/divider.pug
         a(href='https://demo.varg.dev/vidi') demo
         include partials/divider.pug
         a(href='https://github.com/lukaswagner/vidi') gh
-    +row('uebungsrahmen')
+    +row('uebungsrahmen', 'uebungsrahmen')
         | [JS/TS] Web-based coding exercise framework (with Node.js backend). 
         | Designed to be customizable and reusable between lectures. 
         | Employed repeatedly alongside computer graphics lectures for 
