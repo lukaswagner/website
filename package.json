@@ -11,16 +11,16 @@
     "devDependencies": {
         "compression-webpack-plugin": "^10.0.0",
         "css-import-loader": "^0.0.1",
-        "css-loader": "^6.7.1",
-        "css-minimizer-webpack-plugin": "^4.0.0",
+        "css-loader": "^6.7.2",
+        "css-minimizer-webpack-plugin": "^4.2.2",
         "fira": "mozilla/Fira",
         "fontmin": "^0.9.9",
         "fontmin-webpack": "^4.0.0",
         "pug": "^3.0.2",
         "pug-plugin": "^4.5.0",
-        "webpack": "^5.73.0",
-        "webpack-cli": "^4.10.0",
-        "webpack-dev-server": "^4.9.2"
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.0",
+        "webpack-dev-server": "^4.11.1"
     },
     "scripts": {
         "start": "webpack serve --mode development",
