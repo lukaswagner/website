@@ -40,9 +40,6 @@ module.exports = function (env, argv) {
                 minRatio: 0.9
             })
         ],
-        resolveLoader: {
-            modules: ['node_modules', path.resolve(__dirname, 'loaders')]
-        },
         module: {
             rules: [
                 {
@@ -53,7 +50,7 @@ module.exports = function (env, argv) {
                     test: /\.css$/,
                     use: [
                         { loader: 'css-loader', options: { import: false } },
-                        { loader: 'css-import-loader', options: { verbose: true } },
+                        { loader: 'css-import-loader' },
                     ]
                 },
                 {

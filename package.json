@@ -10,6 +10,7 @@
     "license": "MIT",
     "devDependencies": {
         "compression-webpack-plugin": "^10.0.0",
+        "css-import-loader": "^0.0.1",
         "css-loader": "^6.7.1",
         "css-minimizer-webpack-plugin": "^4.0.0",
         "fira": "mozilla/Fira",
