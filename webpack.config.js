@@ -1,12 +1,10 @@
 'use strict';
 
 const path = require('path');
-const CompressionPlugin = require("compression-webpack-plugin");
+const PugPlugin = require('pug-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const FontminPlugin = require('fontmin-webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 function code(char) {
     return char.charCodeAt();
@@ -31,34 +29,31 @@ module.exports = function (env, argv) {
             clean: true
         },
         entry: {
-            mail: './source/js/mail.js',
-            style: './source/css/style.css',
+            index: './source/index.pug'
         },
         plugins: [
-            new HtmlWebpackPlugin({
-                filename: 'index.html',
-                template: './source/index.pug'
-            }),
+            new PugPlugin(),
             new FontminPlugin({
                 glyphs: chars()
             }),
-            new MiniCssExtractPlugin(),
-            new RemoveEmptyScriptsPlugin(),
             new CompressionPlugin({
                 minRatio: 0.9
             })
         ],
+        resolveLoader: {
+            modules: ['node_modules', path.resolve(__dirname, 'loaders')]
+        },
         module: {
             rules: [
                 {
                     test: /\.pug$/,
-                    use: { loader: 'pug-loader' },
+                    use: { loader: PugPlugin.loader },
                 },
                 {
                     test: /\.css$/,
                     use: [
-                        MiniCssExtractPlugin.loader,
-                        { loader: 'css-loader' },
+                        { loader: 'css-loader', options: { import: false } },
+                        { loader: 'css-import-loader', options: { verbose: true } },
                     ]
                 },
                 {
@@ -83,6 +78,9 @@ module.exports = function (env, argv) {
                 `...`,
                 new CssMinimizerPlugin(),
             ],
+        },
+        devServer: {
+            hot: false
         }
     };
 }
