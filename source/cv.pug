@@ -3,11 +3,18 @@ include partials/heading.pug
 
 +heading('CV', 'cv')
 table
+    +row('2023 - ?')
+        span.hl Graphics engineer
+        |  at Threedy
+        include partials/divider.pug
+        a.nbr(href='https://www.threedy.io') threedy.io
     +row('2019 - 2022')
-        | Research assistant at Hasso Plattner Institute, 
-        | Computer Graphics Systems chair.
+        span.hl Research assistant
+        |  at Hasso Plattner Institute, Computer Graphics Systems chair.
         <br>
-        | Research Focus: Development of a web-based 3D scatter plot viewer (see 
+        | Research Focus: Development of a 
+        span.hl web-based 3D scatter plot viewer
+        |  (see 
         a(href='#vidi') vidi
         | , 
         a(href='#web3d2022') Web3D 2022
@@ -16,9 +23,9 @@ table
         | ).
         <br>
         | Teaching Focus: Lectures 
-        i 3D computer graphics I
+        span.hl 3D computer graphics I
         |  and 
-        i II
+        span.hl II
         |  (see 
         a(href='#teaching') teaching
         | ), 
@@ -31,8 +38,13 @@ table
         include partials/divider.pug
         a.nbr(href='https://hpi3d.de') hpi3d.de
     +row('2016 - 2019')
-        | MSc student at Hasso Plattner Institute, 
-        | focus on computer graphics and human-computer interaction. 
+        span.hl MSc student
+        |  at Hasso Plattner Institute, 
+        | focus on 
+        span.hl computer graphics
+        |  and 
+        span.hl human-computer interaction
+        | . 
         | Included One-year project and master's thesis on 
         a(href="https://hpi.de/baudisch/projects/dualpanto.html") DualPanto
         | . 
@@ -42,7 +54,8 @@ table
         include partials/divider.pug
         a.nbr(href='https://hpi.de') hpi.de
     +row('2013 - 2016')
-        | BSc student at Hasso Plattner Institute. 
+        span.hl BSc student
+        |  at Hasso Plattner Institute. 
         | Included one-year project and bachelor's thesis on 
         a(href="https://hpi.de/baudisch/projects/platener.html") Platener
         | . 

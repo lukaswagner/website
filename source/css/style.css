@@ -11,6 +11,7 @@
     --vs-comment: #6A9955;
     --vs-link: #569CD6;
     --vs-visited-link: #C586C0;
+    --vs-highlight: #DCDCAA;
     --left-col: 13ch;
     --space: 1em;
 }
@@ -33,4 +34,8 @@ div {
 
 div:last-child {
     margin-bottom: var(--space);
+}
+
+.hl {
+    color: var(--vs-highlight);
 }
