@@ -4,10 +4,8 @@ include partials/heading.pug
 +heading('CV', 'cv')
 table
     +row('2023 - ?')
-        span.hl Graphics engineer
-        |  at Threedy
-        include partials/divider.pug
-        a.nbr(href='https://www.threedy.io') threedy.io
+        :md
+            *Graphics engineer* at Threedy<//>[threedy.io](https://www.threedy.io)
     +row('2019 - 2022')
         span.hl Research assistant
         |  at Hasso Plattner Institute, Computer Graphics Systems chair.
