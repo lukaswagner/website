@@ -47,7 +47,7 @@ module.exports = function (env, argv) {
                     use: {
                         loader: PugPlugin.loader,
                         options: {
-                            filters: { 'md': require('./filters/md-light') }
+                            filters: { 'format': require('./filters/format') }
                         }
                     },
                 },

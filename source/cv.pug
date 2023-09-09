@@ -4,60 +4,34 @@ include partials/heading.pug
 +heading('CV', 'cv')
 table
     +row('2023 - ?')
-        :md
-            *Graphics engineer* at Threedy<//>[threedy.io](https://www.threedy.io)
+        :format
+            *Graphics engineer* at Threedy
+            <//> [threedy.io](https://www.threedy.io)
     +row('2019 - 2022')
-        span.hl Research assistant
-        |  at Hasso Plattner Institute, Computer Graphics Systems chair.
-        <br>
-        | Research Focus: Development of a 
-        span.hl web-based 3D scatter plot viewer
-        |  (see 
-        a(href='#vidi') vidi
-        | , 
-        a(href='#web3d2022') Web3D 2022
-        | , 
-        a(href='#web3d2020') Web3D 2020
-        | ).
-        <br>
-        | Teaching Focus: Lectures 
-        span.hl 3D computer graphics I
-        |  and 
-        span.hl II
-        |  (see 
-        a(href='#teaching') teaching
-        | ), 
-        | design and development of accompanying exercises: WebGL-2-based 
-        | implementations of various fundamental rendering techniques (e.g. 
-        | shadow rendering, environment mapping,  post-processing effects such 
-        | as SSAO), design and implementation of exercise 
-        a(href="#uebungsrahmen") framework
-        | .
-        include partials/divider.pug
-        a.nbr(href='https://hpi3d.de') hpi3d.de
+        :format
+            *Research assistang* at Hasso Plattner Institute, Computer Graphics Systems chair.
+
+            Research Focus: Development of a *web-based 3D scatter plot viewer*
+            (see #[vidi], #[Web3D 2022], #[Web3D 2020]).
+
+            Teaching Focus: Lectures *3D computer graphics I* and *II* (see #[teaching]),
+            design and development of accompanying exercises: WebGL-2-based implementations of 
+            various fundamental rendering techniques (e.g. shadow rendering, environment mapping,
+            post-processing effects such as SSAO), design and implementation of exercise
+            #[framework](uebungsrahmen).
+            <//> [hpi3d.de](https://hpi3d.de)
     +row('2016 - 2019')
-        span.hl MSc student
-        |  at Hasso Plattner Institute, 
-        | focus on 
-        span.hl computer graphics
-        |  and 
-        span.hl human-computer interaction
-        | . 
-        | Included One-year project and master's thesis on 
-        a(href="https://hpi.de/baudisch/projects/dualpanto.html") DualPanto
-        | . 
-        | The project focused on writing high-performance C++ code 
-        | for calculating 2D physics and resulting haptic feedback
-        | on a microcontroller.
-        include partials/divider.pug
-        a.nbr(href='https://hpi.de') hpi.de
+        :format
+            *MSc student* IT-Systems Engineering at Hasso Plattner Institute, with focus on
+            *computer graphics* and *human-computer interaction*. Included one-year project and 
+            master's thesis on [DualPanto](https://hpi.de/baudisch/projects/dualpanto.html).
+            The project focused on writing high-performance C++ code for calculating 2D physics
+            and resulting haptic feedback on a microcontroller.
+            <//> [hpi.de](https://hpi.de)
     +row('2013 - 2016')
-        span.hl BSc student
-        |  at Hasso Plattner Institute. 
-        | Included one-year project and bachelor's thesis on 
-        a(href="https://hpi.de/baudisch/projects/platener.html") Platener
-        | . 
-        | The project focused on 3D model processing and 
-        | included work on the rendering component built using Three.js.
-        include partials/divider.pug
-        a.nbr(href='https://hpi.de') hpi.de
+        :format
+            *BSc student* IT-Systems Engineering at Hasso Plattner Institute. Included one-year 
+            project and bachelor's thesis on [Platener](https://hpi.de/baudisch/projects/platener.html).
+            The project focused on 3D model processing and included work on the rendering component
+            built using Three.js.
+            <//> [hpi.de](https://hpi.de)
