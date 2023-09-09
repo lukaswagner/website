@@ -4,40 +4,32 @@ include partials/heading.pug
 +heading('Selected projects', 'projects')
 table
     +row('vidi', 'vidi')
-        | [TS] visual dataset inspector: 
-        | Web-based 3D scatter plot viewer for huge data sets (1M - 100M 
-        | entries). Leverages WebGL 2 for hardware-accelerated rendering, 
-        | facilitating plotting of millions of data points at interactive frame 
-        | rates. Supports free mapping of numerical columns to 3D coordinates 
-        | and visual variables (size, color). Utilizes additional render 
-        | buffers and picking to embed controls into the 3D scene. Embeds 
-        | x-ray-like 2D density maps to avoid 3D occlusion issues. See 
-        a(href='#web3d2022') Web3D 2022
-        | , 
-        a(href='#web3d2020') Web3D 2020
-        | .
-        include partials/divider.pug
-        a(href='https://demo.varg.dev/vidi') demo
-        include partials/divider.pug
-        a(href='https://github.com/lukaswagner/vidi') gh
+        :format
+            [TS] visual dataset inspector: Web-based 3D scatter plot viewer for huge data sets 
+            (1M - 100M entries). Leverages WebGL 2 for hardware-accelerated rendering, 
+            facilitating plotting of millions of data points at interactive frame rates. 
+            Supports free mapping of numerical columns to 3D coordinates and visual variables
+            (size, color). Utilizes additional render buffers and picking to embed controls into 
+            the 3D scene. Embeds x-ray-like 2D density maps to avoid 3D occlusion issues. See 
+            #[Web3D 2022], #[Web3D 2020]
+            <//> [demo](https://demo.varg.dev/vidi)
+            <//> [github](https://github.com/lukaswagner/vidi)
     +row('uebungsrahmen', 'uebungsrahmen')
-        | [JS/TS] Web-based coding exercise framework (with Node.js backend). 
-        | Designed to be customizable and reusable between lectures. 
-        | Employed repeatedly alongside computer graphics lectures for 
-        | accompanying exercises using WebGL (see 
-        a(href='#teaching') teaching
-        | ), with consistent positive feedback by students. 
-        | Provides automated import/export of assignments and solutions.
-        | Also includes teaching assistant quality-of-life features such as sample solution 
-        | removal and state cleanup during code reviews. 
-        | Controlled using CLI or electron-based GUI.
-        include partials/divider.pug
-        a(href='https://github.com/lukaswagner/uebungsrahmen') gh
+        :format
+            [JS/TS] Web-based coding exercise framework (with Node.js backend). Designed to be 
+            customizable and reusable between lectures.
+            Employed repeatedly alongside computer graphics lectures for accompanying exercises
+            using WebGL (see #[teaching]), with consistent positive feedback by students. 
+            Provides automated import/export of assignments and solutions.
+            Also includes teaching assistant quality-of-life features such as sample solution 
+            removal and state cleanup during code reviews. 
+            Controlled using CLI or electron-based GUI.
+            <//> [github](https://github.com/lukaswagner/uebungsrahmen)
     +row('csv-parser')
-        | [TS] Quick, multi-threaded CSV parser with focus on handling huge files. Utilizes web workers to leverage all CPU cores. Significantly faster than other in-browser CSV parsers, with support for much larger files.
-        include partials/divider.pug
-        a(href='https://csv.lwgnr.dev') demo
-        include partials/divider.pug
-        a(href='https://github.com/lukaswagner/csv-parser') gh
-        include partials/divider.pug
-        a(href='https://www.npmjs.com/package/@lukaswagner/csv-parser') npm
+        :format
+            [TS] Quick, multi-threaded CSV parser with focus on handling huge files.
+            Utilizes web workers to leverage all CPU cores.
+            Significantly faster than other in-browser CSV parsers, with support for much larger files.
+            <//> [demo](https://csv.lwgnr.dev')
+            <//> [github](https://github.com/lukaswagner/csv-parser)
+            <//> [npm](https://www.npmjs.com/package/@lukaswagner/csv-parser)

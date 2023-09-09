@@ -4,22 +4,18 @@ include partials/heading.pug
 +heading('Publications', 'publications')
 table
     +row('Web3D 2022', 'web3d2022')
-        | Hardware-accelerated Rendering of Web-based 3D Scatter Plots with Projected Density Fields and Embedded Controls
-        include partials/divider.pug
-        | best paper award
-        include partials/divider.pug
-        a(href='https://dl.acm.org/doi/10.1145/3564533.3564566') acm
-        include partials/divider.pug
-        a(href='https://demo.varg.dev/vidi/web3d-2022') demo
-    +row('Web3D 2020', 'web3d2020')
-        | A Framework for Interactive Exploration of Clusters in Massive Data using 3D Scatter Plots and WebGL
-        include partials/divider.pug
-        a(href='https://dl.acm.org/doi/10.1145/3424616.3424730') acm
-        include partials/divider.pug
-        a(href='https://www.researchgate.net/publication/345770726') rg
-        include partials/divider.pug
-        a(href='https://demo.varg.dev/vidi/web3d-2020') demo
+        :format
+            Hardware-accelerated Rendering of Web-based 3D Scatter Plots with Projected Density Fields and Embedded Controls
+            <//> best paper award
+            <//> [acm](https://dl.acm.org/doi/10.1145/3564533.3564566)
+            <//> [demo](https://demo.varg.dev/vidi/web3d-2022)
+    +row('Web3D 2022', 'web3d2022')
+        :format
+            A Framework for Interactive Exploration of Clusters in Massive Data using 3D Scatter Plots and WebGL
+            <//> [acm](https://dl.acm.org/doi/10.1145/3424616.3424730)
+            <//> [rg](https://www.researchgate.net/publication/345770726)
+            <//> [demo](https://demo.varg.dev/vidi/web3d-2020)
     +row('CHI 2018')
-        | VirtualSpace - Overloading Physical Space with Multiple Virtual Reality Users
-        include partials/divider.pug
-        a(href='https://dl.acm.org/doi/10.1145/3173574.3173815') acm
+        :format
+            VirtualSpace - Overloading Physical Space with Multiple Virtual Reality Users
+            <//> [acm](https://dl.acm.org/doi/10.1145/3173574.3173815)

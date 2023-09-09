@@ -44,7 +44,12 @@ module.exports = function (env, argv) {
             rules: [
                 {
                     test: /\.pug$/,
-                    use: { loader: PugPlugin.loader },
+                    use: {
+                        loader: PugPlugin.loader,
+                        options: {
+                            filters: { 'format': require('./filters/format') }
+                        }
+                    },
                 },
                 {
                     test: /\.css$/,
