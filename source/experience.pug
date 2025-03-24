@@ -3,11 +3,22 @@ include partials/heading.pug
 
 +heading('Experience', 'experience')
 table
+    +row('rendering')
+        :format
+            Topics/techniques: real-time rendering, out-of-core rendering, data visualization, non-photorealistic rendering, software-based ray tracing, virtual reality
+
+            Low-level technologies: OpenGl, WebGL, GLSL
+
+            High-level technologies: Unity, Three.js
+    +row('embedded')
+        :format
+            Topics/techniques: High-performance physics (>1000 fps) and haptic feedback, MCU-PC communication, peripheral communication, PCB design
+
+            Technologies: ESP32, Arduino, Pi Pico, C++, Platformio, CMake
     +row('C++')
-        | CLI tools, real-time rendering (OpenGL), libraries,
-        | microcontroller programming (e.g. optimized haptic rendering)
+        | microcontroller programming, real-time rendering (OpenGL), CLI tools, libraries, cross-platform using CMake
     +row('C#')
-        | CLI tools, real-time rendering (OpenGL, Unity)
+        | real-time rendering (OpenGL, Unity), CLI tools
     +row('JS/TS')
         :format
             Web: real-time rendering (WebGL), data processing  
