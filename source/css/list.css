@@ -1,0 +1,9 @@
+li {
+    margin-left: 2ch;
+    /* padding-inline-start: 1ch; */
+    list-style: '* ';
+}
+
+li:first-of-type {
+    margin-top: 1lh;
+}

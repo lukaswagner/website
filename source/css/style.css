@@ -3,6 +3,7 @@
 @import './header.css';
 @import './link.css';
 @import './table.css';
+@import './list.css';
 
 :root {
     /* colors copied from vs code dark theme */
@@ -22,6 +23,7 @@ body {
     margin: auto;
     background-color: var(--vs-background);
     color: var(--vs-text);
+    padding-bottom: 1em;
 }
 
 p {
@@ -38,4 +40,8 @@ div:last-child {
 
 .hl {
     color: var(--vs-highlight);
+}
+
+.comment {
+    color: var(--vs-comment);
 }

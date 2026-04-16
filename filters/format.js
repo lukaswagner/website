@@ -30,21 +30,28 @@ const replacements = [
     // divider <//>
     {
         regex: /\s*<\/\/>\s*/g,
-        func: (match, p1, p2) => {
-            return `<span class="divider">//</span>`
+        func: () => {
+            return `<span class="divider comment">//</span>`
+        }
+    },
+    // lists
+    {
+        regex: /\s*- (.*?)$/gm,
+        func: (match, p1) => {
+            return `<li>${p1}</li>`
         }
     },
     // newlines denoted by two spaces
     {
         regex: /  $/gm,
-        func: (match, p1, p2) => {
+        func: () => {
             return `<br>`
         }
     },
     // double newline for new paragraph
     {
         regex: /\r?\n\r?\n/gm,
-        func: (match, p1, p2) => {
+        func: () => {
             return `<br><br>`
         }
     },
